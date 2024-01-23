@@ -29,15 +29,16 @@ def update_graphs(active_cell):
 )
 def update_table(n):
     read_data_from_mem = pd.read_csv("arduino_data.csv", delimiter=";", index_col="timestamp")
-    print(f"Read in dataframe: {read_data_from_mem}")
+    #print(f"Read in dataframe: {read_data_from_mem}")
     ardu_df = update_data()
     # Update data dataframe
     updated_data = pd.concat([ardu_df, read_data_from_mem])
-    print(f"Dataframe after concat is: {updated_data}")
+    #print(f"Dataframe after concat is: {updated_data}")
     updated_data.to_csv("arduino_data.csv", sep=";", index_label="timestamp")
 
     #get data as it comes:
     read_string = read_serial.get_data()
+    print(read_string)
 
     return updated_data.to_dict("records"), read_string  # Return the updated data dictionary
 # Function to read data from Arduino
