@@ -1,1 +1,1 @@
-
+Im Projekt kommt Arduino zum Einsatz, um Messdaten zu erfassen. Das Messsystem, das mit Arduino verbunden ist, erfasst und überträgt die Messdaten an Arduino. Die Daten werden zunächst durch den Arduino verarbeitet, indem ein entsprechender Code auf das Arduino-Board hochgeladen wird. Nachfolgend erfolgt die Übertragung der verarbeiteten Messdaten über die serielle Verbindung zum Raspberry Pi.
